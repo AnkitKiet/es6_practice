@@ -24,6 +24,12 @@ main();
 })();
 
 //Lambda Functions
-
 var fun = (... params)=> console.log("Inside Lambda Fun",params.length);
 fun("Ankit",2);
+
+//hoisting
+hoist();
+function hoist(){
+    console.log("Hoisting Function");
+    
+}
