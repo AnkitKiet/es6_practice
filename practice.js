@@ -44,3 +44,14 @@ function* ask() {  // * mark is used to denote generator function
  console.log(it.next()); 
  console.log(it.next('ankit'));  
  console.log(it.next('Cricket')); 
+
+ //Array.prototype.find()   *filter vs find* 
+ (function(){
+    var numbers = [1, 2, 3]; 
+    var oddNumber = numbers.find((x) => x % 2 == 1);  // Returns the only number that actually fits in criteria
+    var odd = numbers.filter((x)=> x%2 ==1); // Returns the array
+    console.log(oddNumber);
+    console.log(odd);
+    
+ })();
+ 
