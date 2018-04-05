@@ -33,3 +33,14 @@ function hoist(){
     console.log("Hoisting Function");
     
 }
+
+//Generator Function
+function* ask() {  // * mark is used to denote generator function
+    const name = yield "What is your name?"; 
+    const sport = yield "What is your favorite sport?"; 
+    return `${name}'s favorite sport is ${sport}`; 
+ }  
+ const it = ask(); 
+ console.log(it.next()); 
+ console.log(it.next('ankit'));  
+ console.log(it.next('Cricket')); 
