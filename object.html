@@ -1,70 +1,73 @@
 <html>
-    <head>
-        <script>
-            //Assigning Object properties as per es6 fashion
-            var fun=()=>{
-            var foo = 'bar' 
+
+<head>
+    <script>
+        //Assigning Object properties as per es6 fashion
+        var fun = () => {
+            var foo = 'bar'
             var baz = { foo } //Assignment is as per es6, in es6 we don't need to write property value eg- foo:foo 
             console.log(baz.foo);
 
             //Object Constructor
             var obj = new Object();
-            obj.name="Ankit";
-            obj["age"]="23";
+            obj.name = "Ankit";
+            obj["age"] = "23";
             console.log(obj["name"]);
             console.log(obj.age);
-            
+
             //Using Constructor Function
 
-        function fun_name(str,str1){
-            this.sex=str;
-            this.gender=str1;
-        }
+            function fun_name(str, str1) {
+                this.sex = str;
+                this.gender = str1;
+            }
 
             //Object initializers
-            var obj_f =  new fun_name("Not yet","M"); //HAHAHHAHAHHAHA
-            obj_f.enjoying="No";
+            var obj_f = new fun_name("Not yet", "M"); //HAHAHHAHAHHAHA
+            obj_f.enjoying = "No";
             console.log(obj_f);
-            
+
 
             //Using Object.create()
             var another_obj = {
-                name:"ankit",
-                displayType : function() {  
-                 // Method which will display type of role 
-                 console.log(this.type); 
-                 } 
+                name: "ankit",
+                displayType: function () {
+                    // Method which will display type of role 
+                    console.log(this.type);
+                }
             }
 
             var another_way = Object.create(another_obj);
-            another_way.name="Success";
-            another_way.age="23";
+            another_way.name = "Success";
+            another_way.age = "23";
             console.log(another_way);
             another_way.displayType();
-            
+
 
             //Destructuring Objects
-            var emp = { name: 'Ankit', Id: 3 } 
-            var {name, Id} = emp 
-            console.log(name) 
+            var emp = { name: 'Ankit', Id: 3 }
+            var { name, Id } = emp
+            console.log(name)
             console.log(Id);
 
 
             //Object Prototype
-            function employee(id, name) { 
-            this.id = id; 
-            this.name = name; 
-            } 
-            var emp = new employee(123, "Ankit"); 
-            employee.prototype.email = "ankit@abc.com"; 
-            console.log("Employee 's Id: " + emp.id); 
+            function employee(id, name) {
+                this.id = id;
+                this.name = name;
+            }
+            var emp = new employee(123, "Ankit");
+            employee.prototype.email = "ankit@abc.com";
+            console.log("Employee 's Id: " + emp.id);
             console.log("Employee's name: " + emp.name);
             console.log("Employee's Email ID: " + emp.email);
 
-            }
-        </script>
-    </head>
-    <body>
-        <input type="button" name="click" value="click me" onclick="fun();">
-    </body>
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" name="click" value="click me" onclick="fun();">
+</body>
+
 </html>

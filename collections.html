@@ -1,24 +1,26 @@
 <html>
-    <head>
-        <script>
+
+<head>
+    <script>
         var map = new Map();
-        map.set("key","value").set("key1","value1");
+        map.set("key", "value").set("key1", "value1");
         console.log(map.get("key1"));
         console.log(map.has("key"));  //key is type sensetive
-        for(let r of map.entries()){
+        for (let r of map.entries()) {
             console.log(`${r[0]}: ${r[1]}`);
         }
 
         //Iterators and SET
-        var  set = new Set(['a','n','k','i','t']);  
-        var iterator = set.keys(); 
-        console.log(iterator.next()); console.log(iterator.next()); console.log(iterator.next()); console.log(iterator.next()); console.log(iterator.next()); 
-        
+        var set = new Set(['a', 'n', 'k', 'i', 't']);
+        var iterator = set.keys();
+        console.log(iterator.next()); console.log(iterator.next()); console.log(iterator.next()); console.log(iterator.next()); console.log(iterator.next());
+
 
         //Map and Keys
-        var map = new Map([[1,'one'],[2,'two'],[3,'three']]); 
-        var iterator = map.values(); 
+        var map = new Map([[1, 'one'], [2, 'two'], [3, 'three']]);
+        var iterator = map.values();
         console.log(iterator.next());  
-        </script>
-    </head>
+    </script>
+</head>
+
 </html>
