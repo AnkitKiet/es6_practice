@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script>
+        class Main{
+            constructor(name,age){
+                this.name=name;
+                this.age=age;
+            }
+            test(){
+                console.log(this.age);
+                console.log(this.name);
+                }
+
+        }
+
+        //Using static keyword
+        var obj = new Main("Ankit",23);
+                obj.test();
+                
+                class staticTest{
+                    static demo(){
+                        console.log("hello");                 
+                    }
+                }
+                staticTest.demo();
+
+        //Using inheritence
+            //Parent Class
+            class x{
+                constructor(a){
+                    this.a=a;
+                }
+            }
+            //Child Class
+            class y extends x{
+                display(){
+                console.log(this.a);
+                }
+            }
+            var obj2 = new y(55);
+            obj2.display();
+        </script>
+    </head>
+</html>
